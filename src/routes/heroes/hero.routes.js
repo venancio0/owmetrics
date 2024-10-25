@@ -1,5 +1,5 @@
-const Hero = require('../../models/heroes/hero.model')
-var heroesModel = require('../../models/heroes/heroes')
+const heroesModel = require('../../models/heroes/hero.model')
+var Hero = require('../../models/heroes/heroes')
 
 
 function onInsert(err, docs) {
@@ -44,11 +44,9 @@ module.exports = function (app) {
     })
   });
 
-  // Run this to add the heroes.js file to Moongoose
   app.get("/add", function (req, res) {
     if (req.user) {
       console.log("Deleting")
-      // Delete all the current objects from Hero database
       Hero.deleteMany({}, function(err, result) {
         if (err) {
             console.log(err);
