@@ -9,6 +9,7 @@ services:
       - MONGODB_URL=mongodb://mongo:27017/ow-db
     depends_on:
       - mongo
+    command: sh -c "npm run seed && npm start"  # Adicione isso para rodar o seed ao iniciar
 
   mongo:
     image: mongo:latest
