@@ -1,0 +1,35 @@
+{
+  "name": "owmetrics",
+  "version": "1.0.0",
+  "description": "An api for Metrics about Overwatch heroes and playerbase stats.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/venancio0/owmetrics.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/venancio0/owmetrics/issues"
+  },
+  "homepage": "https://github.com/venancio0/owmetrics/blob/main/README.md",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.4",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.5.0",
+    "mongoose": "^5.4.16",
+    "overwatch-api": "^0.7.4"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.1",
+    "mocha": "^6.0.2"
+  }
+}
