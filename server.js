@@ -4,7 +4,7 @@ const heroRoutes = require("./src/routes/heroes/hero.routes");
 const { healthcheck } = require("./src/controllers/health.controller")
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 // Conectar ao banco de dados
 mongoose.connect("mongodb://localhost:27017/ow-db", {
