@@ -1,5 +1,5 @@
 const Hero = require('../../models/heroes/hero.model')
-var heroesModel = require('./heroes')
+var heroesModel = require('../../models/heroes/heroes')
 
 
 function onInsert(err, docs) {

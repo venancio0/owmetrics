@@ -11,6 +11,7 @@ const HeroSchema = new Schema({
     real_name: { type: String, required: true },
     age: { type: String, required: false },
     height: { type: String, required: false },
+    base_of_operations: { type: String, required: false},
     affiliation: { type: String, required: false },
     difficulty: { type: String, required: true },
     url: { type: String, required: true }
