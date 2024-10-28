@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "test": "mocha",
-    "seed":"node seeders/seed.js"
+    "seed": "node seeders/seed.js"
   },
   "repository": {
     "type": "git",
@@ -19,8 +19,10 @@
   },
   "homepage": "https://github.com/venancio0/owmetrics/blob/main/README.md",
   "dependencies": {
+    "axios": "^1.7.7",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
+    "cheerio": "^1.0.0",
     "cookie-parser": "^1.4.4",
     "dotenv": "^6.2.0",
     "express": "^4.21.1",

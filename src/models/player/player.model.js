@@ -11,14 +11,8 @@ const playerSchema = new mongoose.Schema({
     required: true,
   },
   portrait: String,
-  endorsement: {
-    sportsmanship: { value: Number, rate: Number },
-    shotcaller: { value: Number, rate: Number },
-    teammate: { value: Number, rate: Number },
-    level: Number,
-    frame: String,
-    icon: String,
-  },
+  endorsement: String,
+  title: String,
   private: Boolean,
   games: {
     quickplay: {
