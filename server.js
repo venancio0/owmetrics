@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const heroRoutes = require("./src/routes/heroes/hero.routes");
+const playerRoutes = require("./src/routes/player/player.routes");
 const { healthcheck } = require("./src/controllers/health.controller")
 
 const app = express();
@@ -18,6 +19,7 @@ app.use(express.json());
 
 // Usar as rotas de heróis
 app.use("/api", heroRoutes);
+app.use("/api", playerRoutes);
 app.use("/api/health", healthcheck);
 
 app.listen(PORT, () => {

@@ -1,10 +1,51 @@
 const mongoose = require("mongoose");
 
 const playerSchema = new mongoose.Schema({
-   username: { type: String, required: true, unique: true },
-   region: { type: String },
-   platform: { type: String },
-   createdAt: { type: Date, default: Date.now },
+  tag: {
+    type: String,
+    required: true,
+    unique: true,
+  },
+  username: {
+    type: String,
+    required: true,
+  },
+  portrait: String,
+  endorsement: {
+    sportsmanship: { value: Number, rate: Number },
+    shotcaller: { value: Number, rate: Number },
+    teammate: { value: Number, rate: Number },
+    level: Number,
+    frame: String,
+    icon: String,
+  },
+  private: Boolean,
+  games: {
+    quickplay: {
+      won: Number,
+      played: Number,
+    },
+    competitive: {
+      won: Number,
+      lost: Number,
+      draw: Number,
+      played: Number,
+      win_rate: Number,
+    },
+  },
+  playtime: {
+    quickplay: String,
+    competitive: String,
+  },
+  competitive: {
+    rank: String,
+    rank_img: String,
+  },
+  levelFrame: String,
+  star: String,
 });
+
+// Criar índices para os campos necessários
+playerSchema.index({ tag: 1 }, { unique: true });
 
 module.exports = mongoose.model("Player", playerSchema);
