@@ -34,7 +34,7 @@ class PlayerParser {
         const privateProfile = $(".Profile-private---msg").text() === "THIS PROFILE IS CURRENTLY PRIVATE";
         const games = {
             quickplay: {
-                won: this.parseInt($(".stats.quickPlay-view p:contains('Games Won')").next().text()),
+                won: this.parseNumber($(".stats.quickPlay-view p:contains('Games Won')").next().text()),
                 played: this.parseNumber($(".stats.quickPlay-view p:contains('Games Played')").next().text()),
             },
             competitive: {
